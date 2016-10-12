@@ -23,8 +23,7 @@ class Location(object):
         self._description = None
         self._address = None
         self._tags = []
-        self._contacts = None
-        self._preffered_contact = None
+        self._contact = None
         for prop, val in kwargs.items():
             setattr(self, prop, val)
 
@@ -68,15 +67,8 @@ class Location(object):
         self._primary_key = primary_key
 
     @property
-    def contacts(self):
-        return self._contacts
-    @contacts.setter
-    def contacts(self, contacts):
-        self._contacts = contacts
-
-    @property
-    def preffered_contact(self):
-        return self._preffered_contact
-    @preffered_contact.setter
-    def preffered_contact(self, preffered_contact):
-        self._preffered_contact = preffered_contact
+    def contact(self):
+        return self._contact
+    @contact.setter
+    def contact(self, contact):
+        self._contact = contact

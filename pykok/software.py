@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-The Item is one thing that we want to inventoriate
+A software is a virtual item.
+It has specific 
 In case you have 20 chairs, it is a group of twenty different items
 """
 
@@ -25,13 +26,6 @@ class Software(Item):
     def __repr__(self):
         printer = 'Software (primary_key:{primary_key}, name:{name}, version:{version})'
         return printer.format(primary_key=self.primary_key, name=self.name, version=self.version)
-
-    @property
-    def serial(self):
-        return self._serial
-    @serial.setter
-    def serial(self, serial):
-        self._serial = serial
 
     @property
     def version(self):

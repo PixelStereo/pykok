@@ -10,7 +10,6 @@ from pykok.settings import __dbug__
 from pykok.location import Location
 
 class Item(Location):
-    index = 0
     """
     It is a stuff we want to know where it is, when and its specifications
     Photos is a good point too.
@@ -18,14 +17,10 @@ class Item(Location):
     """
     def __init__(self, **kwargs):
         super(Item, self).__init__()
-        Item.index += 1
-        self._primary_key= Item.index
-        self._name = None
+        self._serial = None
         self._model = None
-        self._contacts = None
         self._brand = None
         self._price = None
-        self._preffered_contact = None
         for prop, val in kwargs.items():
             setattr(self, prop, val)
 
@@ -34,49 +29,28 @@ class Item(Location):
         return printer.format(primary_key=self.primary_key, name=self.name, tags=self.tags)
 
     @property
-    def name(self):
-        return self._name
-    @name.setter
-    def name(self, name):
-        self._name = name
+    def serial(self):
+        """
+        Serial Number of the Item
+        """
+        return self._serial
+    @serial.setter
+    def serial(self, serial):
+        self._serial = serial
+
 
     @property
-    def description(self):
-        return self._description
-    @description.setter
-    def description(self, description):
-        self._description = description
-
-    @property
-    def tags(self):
-        return self._tags
-    @tags.setter
-    def tags(self, tags):
-        self._tags = tags
-
-    @property
-    def address(self):
-        return self._address
-    @address.setter
-    def address(self, address):
-        self._address = address
-
-    @property
-    def primary_key(self):
-        return self._primary_key
-    @primary_key.setter
-    def primary_key(self, primary_key):
-        self._primary_key = primary_key
-
-    @property
-    def contacts(self):
-        return self._contacts
-    @contacts.setter
-    def contacts(self, contacts):
-        self._contacts = contacts
+    def model(self):
+        return self._model
+    @model.setter
+    def model(self, model):
+        self._model = model
 
     @property
     def brand(self):
+        """
+        Brand of the product
+        """
         return self._brand
     @brand.setter
     def brand(self, brand):
@@ -84,14 +58,10 @@ class Item(Location):
 
     @property
     def price(self):
+        """
+        price of purchase
+        """
         return self._price
     @price.setter
     def price(self, price):
         self._price = price
-
-    @property
-    def preffered_contact(self):
-        return self._preffered_contact
-    @preffered_contact.setter
-    def preffered_contact(self, preffered_contact):
-        self._preffered_contact = preffered_contact
