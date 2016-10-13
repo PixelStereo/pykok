@@ -28,7 +28,7 @@ class Item(Base):
             setattr(self, prop, val)
 
     def __repr__(self):
-        printer = 'Location (primary_key:{primary_key}, name:{name}, tags:{tags})'
+        printer = 'Item (primary_key:{primary_key}, name:{name}, tags:{tags})'
         return printer.format(primary_key=self.primary_key, name=self.name, tags=self.tags)
 
     @property
