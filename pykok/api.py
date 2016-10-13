@@ -12,6 +12,10 @@ from pykok.hardware import Hardware
 from pykok.location import Location
 
 def new_item(**kwargs):
+    """
+	Create a new item
+	need a 'category' argument with a value (software, hardware)
+	"""
     if not 'category'in kwargs.keys():
         print('need a category to create an item')
         return False
@@ -22,4 +26,7 @@ def new_item(**kwargs):
             return Hardware(**kwargs)
 
 def new_location(**kwargs):
-	return Location(**kwargs)
+    """
+	create a new location
+	"""
+    return Location(**kwargs)
