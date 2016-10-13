@@ -1,7 +1,7 @@
-pybush
+pykok
 =======
 
-.. automodule:: pybush
+.. automodule:: pykok
     :members:
     :undoc-members:
     :show-inheritance:
@@ -13,43 +13,67 @@ Index
 Modules
 =======
 
-pybush.constants
+
+pykok.api
 --------------------------
 
-.. automodule:: pybush.constants
+.. automodule:: pykok.api
     :members:
     :undoc-members:
     :show-inheritance:
 
-
-pybush.application
+pykok.base
 --------------------------
 
-.. automodule:: pybush.application
+.. automodule:: pykok.base
     :members:
     :undoc-members:
     :show-inheritance:
 
-pybush.node
--------------------
+pykok.hardware
+--------------------------
 
-.. automodule:: pybush.node
+.. automodule:: pykok.hardware
     :members:
     :undoc-members:
     :show-inheritance:
 
-pybush.parameter
-------------------------
+pykok.item
+--------------------------
 
-.. automodule:: pybush.parameter
+.. automodule:: pykok.item
     :members:
     :undoc-members:
     :show-inheritance:
 
-pybush.functions
-------------------------
+pykok.location
+--------------------------
 
-.. automodule:: pybush.functions
+.. automodule:: pykok.location
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pykok.movement
+--------------------------
+
+.. automodule:: pykok.movement
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pykok.settings
+--------------------------
+
+.. automodule:: pykok.settings
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pykok.software
+--------------------------
+
+.. automodule:: pykok.software
     :members:
     :undoc-members:
     :show-inheritance:
