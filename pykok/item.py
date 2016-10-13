@@ -7,16 +7,19 @@ In case you have 20 chairs, it is a group of twenty different items
 """
 
 from pykok.settings import __dbug__
-from pykok.location import Location
+from pykok.base import Base
 
-class Item(Location):
+class Item(Base):
     """
     It is a stuff we want to know where it is, when and its specifications
     Photos is a good point too.
     dimensions (exports possible en pieds ou en metrique)
     """
+    index = 0
     def __init__(self, **kwargs):
         super(Item, self).__init__()
+        Item.index += 1
+        self._primary_key = Item.index
         self._serial = None
         self._model = None
         self._brand = None

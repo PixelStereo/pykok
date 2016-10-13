@@ -8,9 +8,9 @@ A Location must have a Personn as contact
 """
 
 from pykok.settings import __dbug__
+from pykok.base import Base
 
-
-class Location(object):
+class Location(Base):
     index = 0
     """
     It is a warehouse to stock items
@@ -58,13 +58,6 @@ class Location(object):
     @address.setter
     def address(self, address):
         self._address = address
-
-    @property
-    def primary_key(self):
-        return self._primary_key
-    @primary_key.setter
-    def primary_key(self, primary_key):
-        self._primary_key = primary_key
 
     @property
     def contact(self):

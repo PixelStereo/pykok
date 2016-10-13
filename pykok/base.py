@@ -14,7 +14,6 @@ class Base(object):
     """
     def __init__(self, **kwargs):
         super(Base, self).__init__()
-        self._primary_key= Location.index
         self._name = None
         self._description = None
         self._tags = []
