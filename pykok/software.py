@@ -3,7 +3,7 @@
 
 """
 A software is a virtual item.
-It has specific 
+It has specific
 In case you have 20 chairs, it is a group of twenty different items
 """
 
@@ -29,6 +29,10 @@ class Software(Item):
 
     @property
     def version(self):
+        """
+        Version of a software
+        TODO : How to do when we already have a software and we buy an upgrade?
+        """
         return self._version
     @version.setter
     def version(self, version):

@@ -11,10 +11,10 @@ from pykok.settings import __dbug__
 from pykok.base import Base
 
 class Location(Base):
-    index = 0
     """
     It is a warehouse to stock items
     """
+    index = 0
     def __init__(self, **kwargs):
         super(Location, self).__init__()
         Location.index += 1
@@ -32,28 +32,10 @@ class Location(Base):
         return printer.format(primary_key=self.primary_key, name=self.name, address=self.address)
 
     @property
-    def name(self):
-        return self._name
-    @name.setter
-    def name(self, name):
-        self._name = name
-
-    @property
-    def description(self):
-        return self._description
-    @description.setter
-    def description(self, description):
-        self._description = description
-
-    @property
-    def tags(self):
-        return self._tags
-    @tags.setter
-    def tags(self, tags):
-        self._tags = tags
-
-    @property
     def address(self):
+        """
+        Physical address of the location
+        """
         return self._address
     @address.setter
     def address(self, address):
@@ -61,6 +43,9 @@ class Location(Base):
 
     @property
     def contact(self):
+        """
+        Person to contact about this location
+        """
         return self._contact
     @contact.setter
     def contact(self, contact):

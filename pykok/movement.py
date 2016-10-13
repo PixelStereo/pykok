@@ -7,6 +7,7 @@ It is an abstract Class that cannot be instanciate
 """
 
 from pykok.settings import __dbug__
+from pykok.base import Base
 
 class Movement(Base):
     """
