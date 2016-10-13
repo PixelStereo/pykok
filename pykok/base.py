@@ -38,6 +38,9 @@ class Base(object):
 
     @property
     def name(self):
+        """
+        Just a Name for human
+        """
         return self._name
     @name.setter
     def name(self, name):
@@ -45,6 +48,9 @@ class Base(object):
 
     @property
     def description(self):
+        """
+        Long description, to add usefull info
+        """
         return self._description
     @description.setter
     def description(self, description):
@@ -52,6 +58,9 @@ class Base(object):
 
     @property
     def tags(self):
+        """
+        a few words
+        """
         return self._tags
     @tags.setter
     def tags(self, tags):

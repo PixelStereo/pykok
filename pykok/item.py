@@ -34,7 +34,7 @@ class Item(Base):
     @property
     def serial(self):
         """
-        Serial Number of the Item
+        Serial Number
         """
         return self._serial
     @serial.setter
@@ -44,6 +44,9 @@ class Item(Base):
 
     @property
     def model(self):
+        """
+        Model
+        """
         return self._model
     @model.setter
     def model(self, model):
@@ -52,7 +55,7 @@ class Item(Base):
     @property
     def brand(self):
         """
-        Brand of the product
+        Brand
         """
         return self._brand
     @brand.setter
