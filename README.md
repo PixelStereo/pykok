@@ -1,6 +1,8 @@
 # pykok
 
 =====
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/45fa34dc3f0044ecb423580705e07341)](https://www.codacy.com/app/reno-/pykok?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PixelStereo/pykok&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/45fa34dc3f0044ecb423580705e07341)](https://www.codacy.com/app/reno-/pykok?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PixelStereo/pykok&amp;utm_campaign=Badge_Coverage)
 
 **pykok** can be defined as a framework for creating inventory applications
 
