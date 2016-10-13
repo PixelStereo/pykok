@@ -24,12 +24,13 @@ class Item(Base):
         self._model = None
         self._brand = None
         self._price = None
+        self._location = None
         for prop, val in kwargs.items():
             setattr(self, prop, val)
 
     def __repr__(self):
-        printer = 'Item (primary_key:{primary_key}, name:{name}, tags:{tags})'
-        return printer.format(primary_key=self.primary_key, name=self.name, tags=self.tags)
+        printer = 'Item (primary_key:{primary_key}, name:{name}, location:{location})'
+        return printer.format(primary_key=self.primary_key, name=self.name, location=self.location)
 
     @property
     def serial(self):
@@ -71,3 +72,13 @@ class Item(Base):
     @price.setter
     def price(self, price):
         self._price = price
+
+    @property
+    def location(self):
+        """
+        Location where the item is now
+        """
+        return self._location
+    @location.setter
+    def location(self, location):
+        self._location = location

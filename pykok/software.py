@@ -24,8 +24,10 @@ class Software(Item):
             setattr(self, prop, val)
 
     def __repr__(self):
-        printer = 'Software (primary_key:{primary_key}, name:{name}, version:{version})'
-        return printer.format(primary_key=self.primary_key, name=self.name, version=self.version)
+        printer = 'Software (primary_key:{primary_key}, name:{name}, \
+                                location:{location}, version:{version})'
+        return printer.format(primary_key=self.primary_key, name=self.name, \
+                                location=self.location, version=self.version)
 
     @property
     def version(self):

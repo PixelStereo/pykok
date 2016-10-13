@@ -23,10 +23,11 @@ class Hardware(Item):
             setattr(self, prop, val)
 
     def __repr__(self):
-        printer = 'Hardware (primary_key:{primary_key}, name:{name}, \
+        printer = 'Hardware (primary_key:{primary_key}, name:{name}, location:{location} \
                                 dimensions:{dimensions}, weight:{weight})'
         return printer.format(primary_key=self.primary_key, name=self.name, \
-                                dimensions=self.dimensions, weight=self.weight)
+                                location=self.location, dimensions=self.dimensions, \
+                                weight=self.weight)
 
     @property
     def dimensions(self):
