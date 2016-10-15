@@ -10,12 +10,16 @@ It offers a way to organise your inventory with many levels such as location, su
 Every part of the application inherit from a Base Class.
 
 For the moment, **pykok** is capable of:
--  Creating location (Create a Location Class)
+-  ~~Creating location (Create a Location Class)~~
 -  ~~Creating item (Create an Item Class)~~
--  Move an item between different location (create a Movement Class)
--  Export reports to PDF files
--  Export inventory to csv format for opening with Libre Office
+-  ~~Move an item between different location (create a Movement Class)~~
 -  Create a group of x same items (same attributes)
+-  Create Person Class to register each task to the user who modify the database
+-  Create reports by location, person, item category (software and hardware)
+-  Allow User to script a request with a generic view for each item (use framework?)
+-  Export reports to PDF files
+-  Import inventory from csv format to import a excel file
+-  Export inventory to csv format for opening with Libre Office
 
 
 ####Documentation
