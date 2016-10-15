@@ -8,6 +8,7 @@ In case you have 20 chairs, it is a group of twenty different items
 
 from pykok.settings import __dbug__
 from pykok.base import Base
+from pykok.relocation import Relocation
 
 class Item(Base):
     """
@@ -25,6 +26,7 @@ class Item(Base):
         self._brand = None
         self._price = None
         self._location = None
+        self._relocations = []
         for prop, val in kwargs.items():
             setattr(self, prop, val)
 
@@ -76,9 +78,23 @@ class Item(Base):
     @property
     def location(self):
         """
-        Location where the item is now
+        actual location of the item
         """
-        return self._location
-    @location.setter
-    def location(self, location):
+        if self.relocations:
+            return self.relocations[-1].new
+        else:
+            return None
+
+    def relocation(self, location, timestamp=None):
+        """
+        Relocation of an item to a new location
+        """
+        self._relocations.append(Relocation(new=location, timestamp=timestamp))
         self._location = location
+
+    @property
+    def relocations(self):
+        """
+        list of relocations of an item over its lifespan
+        """
+        return self._relocations
