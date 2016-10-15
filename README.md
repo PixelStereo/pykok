@@ -40,3 +40,14 @@ The tests.py contains a nice exemple to understand what you can do with pykok pa
 ---
 Development is made on OSX with python 2.7.12    
 Continious integration is made on linux for python 2 and 3.
+
+####Legal Notice
+---
+Use [python-versioneer](https://github.com/warner/python-versioneer) for a smart versionning routine
+Use [travis-sphinx](https://github.com/Syntaf/travis-sphinx) for publishing sphinx for each new tag
+
+####Development guidelines
+---
+As long as it could be without weird code, write code for python 2/3    
+    from __future__ import print_function    
+    from __future__ import unicode_literals    
