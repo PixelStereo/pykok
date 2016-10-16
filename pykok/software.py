@@ -18,7 +18,6 @@ class Software(Item):
     """
     def __init__(self, **kwargs):
         super(Software, self).__init__()
-        self._serial = None
         self._version = None
         for prop, val in kwargs.items():
             setattr(self, prop, val)
