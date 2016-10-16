@@ -11,6 +11,8 @@ from pykok.software import Software
 from pykok.hardware import Hardware
 from pykok.location import Location
 
+_items = []
+
 def new_item(**kwargs):
     """
 	Create a new item
@@ -21,12 +23,27 @@ def new_item(**kwargs):
         return False
     else:
         if kwargs['category'] == 'software':
-            return Software(**kwargs)
-        elif kwargs['category'] is 'hardware':
-            return Hardware(**kwargs)
+            new_soft = Software(**kwargs)
+            _items.append(new_soft)
+            return new_soft
+        elif kwargs['category'] == 'hardware':
+            new_hard = Hardware(**kwargs)
+            _items.append(new_hard)
+            return new_hard
 
 def new_location(**kwargs):
     """
 	create a new location
 	"""
     return Location(**kwargs)
+
+def get_items(**kwargs):
+    """
+    get a list of items
+    """
+    if 'name' in kwargs.keys():
+        return [item for item in _items if kwargs['name'] in item.name]
+    elif 'purchase_date' in kwargs.keys():
+        return [item for item in _items if kwargs['purchase_date'] == item.purchase_date]
+    else:
+        return _items
