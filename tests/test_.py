@@ -56,9 +56,13 @@ class TestAll(unittest.TestCase):
 
 
 class TestSecond(unittest.TestCase):
-    def __init__(self, arg):
-        super(TestSecond, self).__init__()
-        print('------- SECOND TEST --------')
+    print('------- SECOND TEST --------')
+    def test_reset(self):
+        app.reset()
+        papath = os.path.abspath('./../test-csv.csv')
+        app.import_csv(papath)
+        self.assertEqual(len(app.get_items()), 28)
+
         
 
 if __name__ == '__main__':
