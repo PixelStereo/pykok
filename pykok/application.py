@@ -43,7 +43,7 @@ class Application(Base):
     def import_csv(self, filepath):
         """
         import items from a csv file
-        The file must have the followings columns : 
+        The file must have the followings columns :
         category, name, serial, description, notes, purchase_date, purchase_price, warranty
         """
         try:
