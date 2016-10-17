@@ -62,6 +62,7 @@ class TestSecond(unittest.TestCase):
         papath = os.path.abspath('./../test-csv.csv')
         app.import_csv(papath)
         self.assertEqual(len(app.get_items()), 28)
+        self.assertEqual(len(app.get_items(name='Mac')), 6)
 
         
 
