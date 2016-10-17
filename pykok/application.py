@@ -51,7 +51,7 @@ class Application(Base):
             # read the csv file
             if __dbug__:
                 print('try to import file ' + filepath)
-            reader = csv.DictReader(open(filepath, 'rb'))
+            reader = csv.DictReader(open(filepath, 'r'))
             # make a list of all the items (all the lines)
             dict_list = []
             for line in reader:
