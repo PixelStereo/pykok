@@ -8,14 +8,14 @@ sys.path.append(os.path.abspath('./../'))
 
 import time
 from pykok.settings import __dbug__
-from pykok.api import new_item, new_location
+from pykok.api import app
 
 
-loc_1 = new_location(name='maison')
-loc_2 = new_location(name='studio', address='Rebeval')
-loc_3 = new_location()
-item_1 = new_item(category='software', name='Ableton Live', version='9.7')
-item_2 = new_item(category='hardware', name='Mac Pro Hermès', weight=22.2, price=2800)
+loc_1 = app.new_location(name='maison')
+loc_2 = app.new_location(name='studio', address='Rebeval')
+loc_3 = app.new_location()
+item_1 = app.new_item(category='software', name='Ableton Live', version='9.7')
+item_2 = app.new_item(category='hardware', name='Mac Pro Hermès', weight=22.2, price=2800)
 item_1.relocation(loc_1)
 item_1.relocation(loc_2)
 
