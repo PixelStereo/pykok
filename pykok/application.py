@@ -69,6 +69,12 @@ class Application(Base):
                 print('Error - can not import file ' + filepath)
             return False
 
+    def reset(self):
+        """
+        Reset items and location to None
+        """
+        self._items = []
+        self._locations= []
 
     def new_item(self, **kwargs):
         """
