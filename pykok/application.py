@@ -92,7 +92,9 @@ class Application(Base):
         """
         create a new location
         """
-        return Location(**kwargs)
+        new_loc = Location(**kwargs)
+        self._locations.append(new_loc)
+        return new_loc
 
     def get_items(self, **kwargs):
         """

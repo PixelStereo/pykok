@@ -8,7 +8,6 @@ It is a Class that inherit from Movement
 
 from pykok.settings import __dbug__
 from pykok.movement import Movement
-from datetime import datetime
 
 class Relocation(Movement):
     """

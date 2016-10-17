@@ -19,6 +19,7 @@ class Movement(Base):
         super(Movement, self).__init__()
         Movement.index += 1
         self._primary_key = Movement.index
+        self._timestamp = None
         for prop, val in kwargs.items():
             setattr(self, prop, val)
 
@@ -28,6 +29,9 @@ class Movement(Base):
 
     @property
     def timestamp(self):
+        """
+        this is a the exact date when the movement happened
+        """
         return self._timestamp
     @timestamp.setter
     def timestamp(self, timestamp):
