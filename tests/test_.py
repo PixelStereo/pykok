@@ -21,7 +21,6 @@ item_1.relocation(loc_2)
 
 
 class TestAll(unittest.TestCase):
-    print('------- FIRST TEST --------')
     def test_location(self):
         self.assertEqual(loc_1.name, 'maison')
         self.assertEqual(loc_2.address, 'Rebeval')
@@ -40,6 +39,9 @@ class TestAll(unittest.TestCase):
         self.assertEqual(item_1.location, loc_2)
 
     def test_print(self):
+        print('---------------------------------------')
+        print('------- start test print --------')
+        print('---------------------------------------')
         print('--- LOC_1 ---')
         print(loc_1)
         print('--- LOC_2 ---')
@@ -53,10 +55,12 @@ class TestAll(unittest.TestCase):
         print('--- ITEM 1 RELOCATIONS ---')
         for reloc in item_1.relocations:
             print(reloc)
+        print('---------------------------------------')
+        print('------- end test print --------')
+        print('---------------------------------------')
 
 
 class TestSecond(unittest.TestCase):
-    print('------- SECOND TEST --------')
     def test_reset(self):
         app.reset()
         papath = os.path.abspath('./../test-csv.csv')
